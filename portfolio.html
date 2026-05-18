@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmanuel | Frontend Developer</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        font-family: "Outfit", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #050816;
+        overflow-x: hidden;
+      }
+
+      /* Glow Effects */
+      .glow1 {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: rgba(249, 115, 22, 0.25);
+        filter: blur(150px);
+        border-radius: 50%;
+        top: -100px;
+        left: -150px;
+        z-index: -1;
+      }
+
+      .glow2 {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: rgba(168, 85, 247, 0.25);
+        filter: blur(150px);
+        border-radius: 50%;
+        bottom: -100px;
+        right: -150px;
+        z-index: -1;
+      }
+
+      /* Floating Animation */
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .float {
+        animation: float 4s ease-in-out infinite;
+      }
+
+      /* Gradient Text */
+      .gradient-text {
+        background: linear-gradient(to right, #f97316, #fb923c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Card Hover */
+      .card-hover {
+        transition: all 0.4s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-10px);
+        border-color: #f97316;
+        box-shadow: 0 0 40px rgba(249, 115, 22, 0.2);
+      }
+
+      /* Hero Image Glow */
+      .hero-image::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(249, 115, 22, 0.2),
+          transparent
+        );
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+
+  <body class="text-white relative">
+    <!-- Glow -->
+    <div class="glow1"></div>
+    <div class="glow2"></div>
+
+    <!-- NAVBAR -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/20 border-b border-white/10"
+    >
+      <nav
+        class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-3">
+          <div
+            class="w-11 h-11 rounded-full bg-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/40"
+          >
+            <span class="text-black font-black text-lg">E</span>
+          </div>
+
+          <div>
+            <h1 class="text-xl font-black tracking-wide">Emmanuel</h1>
+
+            <p class="text-[10px] text-gray-400 tracking-[3px] uppercase">
+              Frontend Developer
+            </p>
+          </div>
+        </div>
+
+        <ul class="hidden md:flex gap-10 text-sm text-gray-300 font-medium">
+          <li>
+            <a href="#services" class="hover:text-orange-500 transition"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-orange-500 transition"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="hover:text-orange-500 transition"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a href="#about" class="hover:text-orange-500 transition">About</a>
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-orange-500 transition"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <button
+          class="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-full font-semibold shadow-lg shadow-orange-500/40"
+        >
+          <a href="./contact.html"> Hire Me</a>
+        </button>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section
+      class="max-w-7xl mx-auto min-h-screen px-6 grid lg:grid-cols-2 gap-20 items-center pt-40"
+    >
+      <!-- LEFT -->
+      <div data-aos="fade-right">
+        <p
+          class="uppercase tracking-[4px] text-orange-400 text-sm mb-8 font-semibold"
+        >
+          Open To Freelance & Full-Time Opportunities
+        </p>
+
+        <h1 class="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95]">
+          Hi, I'm <br />
+          <span class="gradient-text">Emmanuel</span><br />
+          I Build <br />
+          the Web.
+        </h1>
+
+        <p class="mt-8 text-gray-400 text-lg leading-8 max-w-xl">
+          Frontend Developer & WordPress Specialist focused on creating
+          responsive websites, smooth UI experiences, and modern digital
+          products using HTML, CSS, JavaScript, Tailwind CSS, React, and
+          WordPress.
+        </p>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-5 mt-10">
+          <button
+            class="bg-orange-500 hover:scale-105 hover:bg-orange-600 transition duration-300 px-8 py-4 rounded-full font-semibold shadow-xl shadow-orange-500/30"
+          >
+            View My Work →
+          </button>
+
+          <button
+            class="border border-white/20 hover:border-orange-500 hover:text-orange-500 transition duration-300 px-8 py-4 rounded-full font-semibold"
+          >
+            Let's Talk
+          </button>
+        </div>
+
+        <!-- STATS -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-20">
+          <div>
+            <h2 class="text-orange-500 text-4xl font-black">2+</h2>
+            <p class="text-gray-500 mt-2 text-sm">Years Experience</p>
+          </div>
+
+          <div>
+            <h2 class="text-orange-500 text-4xl font-black">30+</h2>
+            <p class="text-gray-500 mt-2 text-sm">Projects Completed</p>
+          </div>
+
+          <div>
+            <h2 class="text-orange-500 text-4xl font-black">40+</h2>
+            <p class="text-gray-500 mt-2 text-sm">Happy Clients</p>
+          </div>
+
+          <div>
+            <h2 class="text-orange-500 text-4xl font-black">100%</h2>
+            <p class="text-gray-500 mt-2 text-sm">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="relative flex justify-center" data-aos="fade-left">
+        <!-- Glow -->
+        <div
+          class="absolute w-[450px] h-[450px] bg-orange-500/20 blur-[120px] rounded-full"
+        ></div>
+
+        <!-- Image -->
+        <div
+          class="hero-image relative border border-orange-500/20 rounded-[40px] p-6 bg-white/5 backdrop-blur-xl"
+        >
+          <img
+            src="./file_00000000eff8720aa0bea47fae6e6221.png"
+            class="w-[380px] h-[520px] object-cover rounded-[30px] float"
+          />
+
+          <!-- Top Card -->
+          <div
+            class="absolute top-8 right-[-40px] bg-white text-black rounded-2xl p-5 shadow-2xl w-[220px] float"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold"
+              >
+                ✓
+              </div>
+
+              <div>
+                <h3 class="font-bold text-lg">30+ Projects</h3>
+                <p class="text-gray-500 text-sm">Successfully Delivered</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Card -->
+          <div
+            class="absolute bottom-8 left-[-40px] bg-white text-black rounded-2xl p-5 shadow-2xl w-[220px] float"
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 font-bold"
+              >
+                &lt;/&gt;
+              </div>
+
+              <div>
+                <h3 class="font-bold text-lg">Frontend Dev</h3>
+                <p class="text-gray-500 text-sm">React & WordPress</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SERVICES SECTION -->
+    <section id="services" class="bg-[#f5f5f7] text-black py-32 px-6">
+      <div class="max-w-7xl mx-auto">
+        <!-- Heading -->
+        <div class="text-center mb-20" data-aos="fade-up">
+          <p
+            class="uppercase tracking-[4px] text-orange-500 text-sm font-semibold mb-4"
+          >
+            Services
+          </p>
+
+          <h2 class="text-5xl md:text-6xl font-black mb-6">
+            What I Can Do For You
+          </h2>
+
+          <p class="text-gray-500 text-lg max-w-2xl mx-auto leading-8">
+            Building modern digital experiences with frontend development,
+            WordPress solutions, and performance-focused design systems.
+          </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+          <!-- CARD -->
+          <div
+            class="group bg-white border border-gray-200 rounded-[35px] p-10 hover:border-orange-300 transition duration-500 hover:-translate-y-3"
+          >
+            <!-- Icon -->
+            <div
+              class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-10 group-hover:scale-110 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-8 h-8 text-orange-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 9l3-3 3 3m0 6l-3 3-3-3"
+                />
+              </svg>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-4xl font-black leading-tight mb-8">
+              Front-End <br />
+              Development
+            </h3>
+
+            <!-- Text -->
+            <p class="text-gray-500 leading-9 text-lg mb-10">
+              Pixel-perfect, responsive interfaces built with HTML, Tailwind
+              CSS, JavaScript, and modern frontend systems focused on speed and
+              user experience.
+            </p>
+
+            <!-- List -->
+            <div class="space-y-5">
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Responsive Design</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Modern UI Systems</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Performance Optimization</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Interactive Animations</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="group bg-white border border-gray-200 rounded-[35px] p-10 hover:border-orange-300 transition duration-500 hover:-translate-y-3"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-10 group-hover:scale-110 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-8 h-8 text-orange-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4.354a4 4 0 110 5.292M15 21H9m6 0a2 2 0 002-2v-5a2 2 0 00-.586-1.414l-1.414-1.414A2 2 0 0114.414 11H9.586a2 2 0 01-1.414-.586L6.758 9A2 2 0 016 7.586V5a2 2 0 012-2h8a2 2 0 012 2v2.586a2 2 0 01-.586 1.414L15 10.414A2 2 0 0014.414 12H15a2 2 0 012 2v5a2 2 0 01-2 2z"
+                />
+              </svg>
+            </div>
+
+            <h3 class="text-4xl font-black leading-tight mb-8">
+              WordPress <br />
+              Development
+            </h3>
+
+            <p class="text-gray-500 leading-9 text-lg mb-10">
+              Professional WordPress websites built for businesses, brands,
+              blogs, and scalable online platforms.
+            </p>
+
+            <div class="space-y-5">
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Custom Themes</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Elementor Design</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">WooCommerce</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">SEO Optimization</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="group bg-white border border-gray-200 rounded-[35px] p-10 hover:border-orange-300 transition duration-500 hover:-translate-y-3"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-10 group-hover:scale-110 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-8 h-8 text-orange-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+
+            <h3 class="text-4xl font-black leading-tight mb-8">
+              Performance <br />
+              & SEO
+            </h3>
+
+            <p class="text-gray-500 leading-9 text-lg mb-10">
+              Fast-loading websites optimized for better rankings, smoother
+              interactions, and higher conversion rates.
+            </p>
+
+            <div class="space-y-5">
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Core Web Vitals</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Image Optimization</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Technical SEO</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">PageSpeed Optimization</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD -->
+          <div
+            class="group bg-white border border-orange-200 rounded-[35px] p-10 hover:border-orange-400 transition duration-500 hover:-translate-y-3"
+          >
+            <div
+              class="w-16 h-16 rounded-2xl bg-orange-100 flex items-center justify-center mb-10 group-hover:scale-110 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-8 h-8 text-orange-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+
+            <h3 class="text-4xl font-black leading-tight mb-8">
+              Responsive & <br />
+              Mobile-First
+            </h3>
+
+            <p class="text-gray-500 leading-9 text-lg mb-10">
+              Every website is built to look premium and work perfectly across
+              mobile, tablet, and desktop devices.
+            </p>
+
+            <div class="space-y-5">
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Cross-browser Support</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Touch-friendly UI</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Adaptive Layouts</p>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <span class="text-orange-500">✓</span>
+                <p class="text-gray-700">Modern Accessibility</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="max-w-7xl mx-auto px-6 py-32">
+      <div class="text-center mb-20" data-aos="fade-up">
+        <p
+          class="text-orange-500 uppercase tracking-[4px] text-sm font-semibold mb-4"
+        >
+          My Expertise
+        </p>
+
+        <h2 class="text-5xl font-black">Tech Stack & Skills</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="card-hover border border-white/10 bg-white/5 rounded-3xl p-8 backdrop-blur-xl"
+        >
+          <h3 class="text-2xl font-bold mb-4">HTML5</h3>
+          <p class="text-gray-400 leading-7">
+            Semantic and SEO-friendly structure for modern websites.
+          </p>
+        </div>
+
+        <div
+          class="card-hover border border-white/10 bg-white/5 rounded-3xl p-8 backdrop-blur-xl"
+        >
+          <h3 class="text-2xl font-bold mb-4">Tailwind CSS</h3>
+          <p class="text-gray-400 leading-7">
+            Fast and responsive UI development with utility-first styling.
+          </p>
+        </div>
+
+        <div
+          class="card-hover border border-white/10 bg-white/5 rounded-3xl p-8 backdrop-blur-xl"
+        >
+          <h3 class="text-2xl font-bold mb-4">JavaScript</h3>
+          <p class="text-gray-400 leading-7">
+            Dynamic frontend interactions and smooth user experiences.
+          </p>
+        </div>
+
+        <div
+          class="card-hover border border-white/10 bg-white/5 rounded-3xl p-8 backdrop-blur-xl"
+        >
+          <h3 class="text-2xl font-bold mb-4">WordPress</h3>
+          <p class="text-gray-400 leading-7">
+            Professional CMS websites with custom layouts and optimization.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-7xl mx-auto px-6 py-32">
+      <div class="text-center mb-20" data-aos="fade-up">
+        <p
+          class="text-orange-500 uppercase tracking-[4px] text-sm font-semibold mb-4"
+        >
+          Featured Work
+        </p>
+
+        <h2 class="text-5xl font-black">Recent Projects</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-10">
+        <!-- CARD -->
+        <div
+          class="card-hover rounded-[30px] overflow-hidden border border-white/10 bg-white/5"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-[250px] object-cover hover:scale-110 transition duration-500"
+            />
+          </div>
+
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-4">Business Website</h3>
+
+            <p class="text-gray-400 leading-7 mb-6">
+              Responsive website built with modern frontend technologies and
+              optimized UI.
+            </p>
+
+            <button class="text-orange-500 font-semibold hover:underline">
+              View Project →
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="card-hover rounded-[30px] overflow-hidden border border-white/10 bg-white/5"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-[250px] object-cover hover:scale-110 transition duration-500"
+            />
+          </div>
+
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-4">WordPress Landing Page</h3>
+
+            <p class="text-gray-400 leading-7 mb-6">
+              High-converting WordPress design with premium UI animations.
+            </p>
+
+            <button class="text-orange-500 font-semibold hover:underline">
+              View Project →
+            </button>
+          </div>
+        </div>
+
+        <!-- CARD -->
+        <div
+          class="card-hover rounded-[30px] overflow-hidden border border-white/10 bg-white/5"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+              class="w-full h-[250px] object-cover hover:scale-110 transition duration-500"
+            />
+          </div>
+
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-4">Tech Portfolio</h3>
+
+            <p class="text-gray-400 leading-7 mb-6">
+              Modern portfolio UI with responsive layouts and smooth
+              interactions.
+            </p>
+
+            <button class="text-orange-500 font-semibold hover:underline">
+              View Project →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section
+      id="about"
+      class="max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-2 gap-20 items-center"
+    >
+      <div data-aos="fade-right">
+        <img
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-[40px] border border-white/10"
+        />
+      </div>
+
+      <div data-aos="fade-left">
+        <p
+          class="text-orange-500 uppercase tracking-[4px] text-sm font-semibold mb-4"
+        >
+          About Me
+        </p>
+
+        <h2 class="text-5xl font-black leading-tight mb-8">
+          Creating Beautiful Digital Experiences.
+        </h2>
+
+        <p class="text-gray-400 text-lg leading-8 mb-8">
+          I'm Emmanuel Chidiebube, a frontend developer and WordPress designer
+          passionate about building beautiful interfaces and high-performing
+          websites.
+        </p>
+
+        <p class="text-gray-400 text-lg leading-8 mb-10">
+          I specialize in responsive design, frontend animations, modern UI
+          systems, and creating smooth digital experiences users love.
+        </p>
+
+        <button
+          class="bg-orange-500 hover:bg-orange-600 hover:scale-105 transition duration-300 px-8 py-4 rounded-full font-semibold shadow-xl shadow-orange-500/30"
+        >
+          Download CV
+        </button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-5xl mx-auto px-6 py-32 text-center">
+      <p
+        class="text-orange-500 uppercase tracking-[4px] text-sm font-semibold mb-4"
+      >
+        Contact Me
+      </p>
+
+      <h2 class="text-5xl font-black mb-8">Let's Build Something Amazing.</h2>
+
+      <p class="text-gray-400 text-lg leading-8 max-w-2xl mx-auto mb-12">
+        Need a frontend developer or WordPress expert for your next project?
+        Let's work together and build something exceptional.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-6">
+        <button
+          class="bg-orange-500 hover:bg-orange-600 hover:scale-105 transition duration-300 px-8 py-4 rounded-full font-semibold shadow-xl shadow-orange-500/30"
+        >
+          <a href="./contact.html">Send Message</a>
+        </button>
+
+        <button
+          class="border border-white/20 hover:border-orange-500 hover:text-orange-500 transition px-8 py-4 rounded-full font-semibold"
+        >
+          <a
+            href="https://wa.me/2349064040696?text=Hello%20Emmanuel%2C%20I%20want%20to%20work%20with%20you."
+            target="_blank"
+            >WhatsApp Me</a
+          >
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="border-t border-white/10 py-10 text-center text-gray-500 text-sm"
+    >
+      © 2026 Emmanuel Chidiebube — Frontend Developer & WordPress Designer.
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: true,
+      });
+
+      // Navbar Shadow on Scroll
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+
+        if (window.scrollY > 50) {
+          header.classList.add("shadow-2xl");
+        } else {
+          header.classList.remove("shadow-2xl");
+        }
+      });
+    </script>
+  </body>
+</html>
