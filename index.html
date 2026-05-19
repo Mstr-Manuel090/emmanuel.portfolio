@@ -109,14 +109,14 @@
     <!-- Glow -->
     <div class="glow1"></div>
     <div class="glow2"></div>
-
-    <!-- NAVBAR -->
+    <!-- HEADER -->
     <header
       class="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/20 border-b border-white/10"
     >
       <nav
         class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center"
       >
+        <!-- LOGO -->
         <div class="flex items-center gap-3">
           <div
             class="w-11 h-11 rounded-full bg-orange-500 flex items-center justify-center shadow-lg shadow-orange-500/40"
@@ -133,60 +133,145 @@
           </div>
         </div>
 
-        <ul class="hidden md:flex gap-10 text-sm text-gray-300 font-medium">
+        <!-- DESKTOP MENU -->
+        <ul class="hidden lg:flex gap-10 text-sm text-gray-300 font-medium">
           <li>
-            <a href="#services" class="hover:text-orange-500 transition"
-              >Services</a
-            >
+            <a href="#services" class="hover:text-orange-500 transition">
+              Services
+            </a>
           </li>
+
           <li>
-            <a href="#projects" class="hover:text-orange-500 transition"
-              >Projects</a
-            >
+            <a href="#projects" class="hover:text-orange-500 transition">
+              Projects
+            </a>
           </li>
+
           <li>
-            <a href="#skills" class="hover:text-orange-500 transition"
-              >Skills</a
-            >
+            <a href="#skills" class="hover:text-orange-500 transition">
+              Skills
+            </a>
           </li>
+
           <li>
-            <a href="#about" class="hover:text-orange-500 transition">About</a>
+            <a href="#about" class="hover:text-orange-500 transition">
+              About
+            </a>
           </li>
+
           <li>
-            <a href="#contact" class="hover:text-orange-500 transition"
-              >Contact</a
-            >
+            <a href="#contact" class="hover:text-orange-500 transition">
+              Contact
+            </a>
           </li>
         </ul>
 
-        <button
-          class="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-full font-semibold shadow-lg shadow-orange-500/40"
-        >
-          <a href="./contact.html"> Hire Me</a>
-        </button>
+        <!-- RIGHT SIDE -->
+        <div class="flex items-center gap-4">
+          <!-- HIRE BUTTON -->
+          <a href="contact.html" class="hidden md:block">
+            <button
+              class="bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-full font-semibold shadow-lg shadow-orange-500/40"
+            >
+              Hire Me
+            </button>
+          </a>
+
+          <!-- MOBILE MENU BUTTON -->
+          <button id="menu-btn" class="lg:hidden text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-8 h-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </nav>
+
+      <!-- MOBILE MENU -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-[#050816]/95 backdrop-blur-2xl border-t border-white/10"
+      >
+        <div class="flex flex-col px-6 py-8 space-y-6 text-lg">
+          <a
+            href="#services"
+            class="mobile-link hover:text-orange-500 transition"
+          >
+            Services
+          </a>
+
+          <a
+            href="#projects"
+            class="mobile-link hover:text-orange-500 transition"
+          >
+            Projects
+          </a>
+
+          <a
+            href="#skills"
+            class="mobile-link hover:text-orange-500 transition"
+          >
+            Skills
+          </a>
+
+          <a href="#about" class="mobile-link hover:text-orange-500 transition">
+            About
+          </a>
+
+          <a
+            href="#contact"
+            class="mobile-link hover:text-orange-500 transition"
+          >
+            Contact
+          </a>
+
+          <a href="contact.html">
+            <button
+              class="w-full bg-orange-500 hover:bg-orange-600 transition py-4 rounded-2xl font-semibold"
+            >
+              Hire Me
+            </button>
+          </a>
+        </div>
+      </div>
     </header>
 
     <!-- HERO -->
     <section
-      class="max-w-7xl mx-auto min-h-screen px-6 grid lg:grid-cols-2 gap-20 items-center pt-40"
+      class="max-w-7xl mx-auto min-h-screen px-6 grid lg:grid-cols-2 gap-16 lg:gap-20 items-center pt-32 md:pt-40 overflow-hidden"
     >
       <!-- LEFT -->
-      <div data-aos="fade-right">
+      <div data-aos="fade-right" class="order-2 lg:order-1">
         <p
-          class="uppercase tracking-[4px] text-orange-400 text-sm mb-8 font-semibold"
+          class="uppercase tracking-[4px] text-orange-400 text-xs sm:text-sm mb-6 md:mb-8 font-semibold"
         >
           Open To Freelance & Full-Time Opportunities
         </p>
 
-        <h1 class="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95]">
+        <h1
+          class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95]"
+        >
           Hi, I'm <br />
+
           <span class="gradient-text">Emmanuel</span><br />
+
           I Build <br />
           the Web.
         </h1>
 
-        <p class="mt-8 text-gray-400 text-lg leading-8 max-w-xl">
+        <p
+          class="mt-6 md:mt-8 text-gray-400 text-base md:text-lg leading-7 md:leading-8 max-w-xl"
+        >
           Frontend Developer & WordPress Specialist focused on creating
           responsive websites, smooth UI experiences, and modern digital
           products using HTML, CSS, JavaScript, Tailwind CSS, React, and
@@ -194,92 +279,121 @@
         </p>
 
         <!-- Buttons -->
-        <div class="flex flex-wrap gap-5 mt-10">
-          <button
-            class="bg-orange-500 hover:scale-105 hover:bg-orange-600 transition duration-300 px-8 py-4 rounded-full font-semibold shadow-xl shadow-orange-500/30"
-          >
-            <a href="./projects.html"></a>View My Work →</a>
-          </button>
+        <div class="flex flex-wrap gap-4 md:gap-5 mt-8 md:mt-10">
+          <!-- Button -->
+          <a href="./projects.html">
+            <button
+              class="bg-orange-500 hover:scale-105 hover:bg-orange-600 transition duration-300 px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold shadow-xl shadow-orange-500/30 text-sm md:text-base"
+            >
+              View My Work →
+            </button>
+          </a>
 
-          <button
-            class="border border-white/20 hover:border-orange-500 hover:text-orange-500 transition duration-300 px-8 py-4 rounded-full font-semibold"
-          >
-            <a href="./contact.html">Let's Talk</a>
-          </button>
+          <!-- Button -->
+          <a href="./contact.html">
+            <button
+              class="border border-white/20 hover:border-orange-500 hover:text-orange-500 transition duration-300 px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-sm md:text-base"
+            >
+              Let's Talk
+            </button>
+          </a>
         </div>
 
         <!-- STATS -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mt-20">
+        <div
+          class="grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-10 mt-16 md:mt-20"
+        >
           <div>
-            <h2 class="text-orange-500 text-4xl font-black">2+</h2>
-            <p class="text-gray-500 mt-2 text-sm">Years Experience</p>
+            <h2 class="text-orange-500 text-3xl md:text-4xl font-black">2+</h2>
+
+            <p class="text-gray-500 mt-2 text-xs md:text-sm">
+              Years Experience
+            </p>
           </div>
 
           <div>
-            <h2 class="text-orange-500 text-4xl font-black">30+</h2>
-            <p class="text-gray-500 mt-2 text-sm">Projects Completed</p>
+            <h2 class="text-orange-500 text-3xl md:text-4xl font-black">40+</h2>
+
+            <p class="text-gray-500 mt-2 text-xs md:text-sm">
+              Projects Completed
+            </p>
           </div>
 
           <div>
-            <h2 class="text-orange-500 text-4xl font-black">40+</h2>
-            <p class="text-gray-500 mt-2 text-sm">Happy Clients</p>
+            <h2 class="text-orange-500 text-3xl md:text-4xl font-black">30+</h2>
+
+            <p class="text-gray-500 mt-2 text-xs md:text-sm">Happy Clients</p>
           </div>
 
           <div>
-            <h2 class="text-orange-500 text-4xl font-black">100%</h2>
-            <p class="text-gray-500 mt-2 text-sm">Client Satisfaction</p>
+            <h2 class="text-orange-500 text-3xl md:text-4xl font-black">
+              100%
+            </h2>
+
+            <p class="text-gray-500 mt-2 text-xs md:text-sm">
+              Client Satisfaction
+            </p>
           </div>
         </div>
       </div>
 
       <!-- RIGHT -->
-      <div class="relative flex justify-center" data-aos="fade-left">
+      <div
+        class="relative flex justify-center order-1 lg:order-2"
+        data-aos="fade-left"
+      >
         <!-- Glow -->
         <div
-          class="absolute w-[450px] h-[450px] bg-orange-500/20 blur-[120px] rounded-full"
+          class="absolute w-[300px] md:w-[450px] h-[300px] md:h-[450px] bg-orange-500/20 blur-[100px] md:blur-[120px] rounded-full"
         ></div>
 
         <!-- Image -->
         <div
-          class="hero-image relative border border-orange-500/20 rounded-[40px] p-6 bg-white/5 backdrop-blur-xl"
+          class="hero-image relative border border-orange-500/20 rounded-[30px] md:rounded-[40px] p-4 md:p-6 bg-white/5 backdrop-blur-xl"
         >
           <img
             src="./file_00000000eff8720aa0bea47fae6e6221.png"
-            class="w-[380px] h-[520px] object-cover rounded-[30px] float"
+            class="w-full max-w-[380px] sm:max-w-[380px] h-[450px] md:h-[520px] object-cover rounded-[25px] md:rounded-[30px] float"
           />
 
           <!-- Top Card -->
           <div
-            class="absolute top-8 right-[-40px] bg-white text-black rounded-2xl p-5 shadow-2xl w-[220px] float"
+            class="absolute top-4 md:top-8 right-[-10px] md:right-[-40px] bg-white text-black rounded-2xl p-4 md:p-5 shadow-2xl w-[180px] md:w-[220px] float"
           >
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3 md:gap-4">
               <div
-                class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold"
+                class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold"
               >
                 ✓
               </div>
 
               <div>
-                <h3 class="font-bold text-lg">30+ Projects</h3>
-                <p class="text-gray-500 text-sm">Successfully Delivered</p>
+                <h3 class="font-bold text-sm md:text-lg">40+ Projects</h3>
+
+                <p class="text-gray-500 text-xs md:text-sm">
+                  Successfully Delivered
+                </p>
               </div>
             </div>
           </div>
 
           <!-- Bottom Card -->
           <div
-            class="absolute bottom-8 left-[-40px] bg-white text-black rounded-2xl p-5 shadow-2xl w-[220px] float"
+            class="absolute bottom-4 md:bottom-8 left-[-10px] md:left-[-40px] bg-white text-black rounded-2xl p-4 md:p-5 shadow-2xl w-[180px] md:w-[220px] float"
           >
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3 md:gap-4">
               <div
-                class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 font-bold"
+                class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 font-bold"
               >
                 &lt;/&gt;
               </div>
 
               <div>
-                <h3 class="font-bold text-lg">Frontend Dev</h3>
-                <p class="text-gray-500 text-sm">React & WordPress</p>
+                <h3 class="font-bold text-sm md:text-lg">Frontend Dev</h3>
+
+                <p class="text-gray-500 text-xs md:text-sm">
+                  React & WordPress
+                </p>
               </div>
             </div>
           </div>
@@ -334,7 +448,7 @@
             </div>
 
             <!-- Title -->
-            <h3 class="text-4xl font-black leading-tight mb-8">
+            <h3 class="text-3xl md:text-4xl font-black leading-tight mb-8">
               Front-End <br />
               Development
             </h3>
@@ -393,7 +507,7 @@
               </svg>
             </div>
 
-            <h3 class="text-4xl font-black leading-tight mb-8">
+            <h3 class="text-3xl md:text-4xl font-black leading-tight mb-8">
               WordPress <br />
               Development
             </h3>
@@ -449,7 +563,7 @@
               </svg>
             </div>
 
-            <h3 class="text-4xl font-black leading-tight mb-8">
+            <h3 class="text-3xl md:text-4xl font-black leading-tight mb-8">
               Performance <br />
               & SEO
             </h3>
@@ -505,7 +619,7 @@
               </svg>
             </div>
 
-            <h3 class="text-4xl font-black leading-tight mb-8">
+            <h3 class="text-3xl md:text-4xl font-black leading-tight mb-8">
               Responsive & <br />
               Mobile-First
             </h3>
@@ -716,28 +830,28 @@
         </p>
 
         <a href="Emmanuel_Chidiebube_CV.pdf" download>
+          <button
+            class="group bg-orange-500 hover:bg-orange-600 hover:scale-105 transition duration-300 px-8 py-4 rounded-full font-semibold shadow-xl shadow-orange-500/30 flex items-center gap-3"
+          >
+            <!-- Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 group-hover:translate-y-1 transition duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
 
-  <button class="group bg-orange-500 hover:bg-orange-600 hover:scale-105 transition duration-300 px-8 py-4 rounded-full font-semibold shadow-xl shadow-orange-500/30 flex items-center gap-3">
-
-    <!-- Icon -->
-    <svg xmlns="http://www.w3.org/2000/svg"
-      class="w-5 h-5 group-hover:translate-y-1 transition duration-300"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor">
-
-      <path stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-
-    </svg>
-
-    Download CV
-
-  </button>
-
-</a>
+            Download CV
+          </button>
+        </a>
       </div>
     </section>
 
@@ -800,6 +914,25 @@
         } else {
           header.classList.remove("shadow-2xl");
         }
+      });
+    </script>
+
+    <script>
+      // MOBILE MENU
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // CLOSE MENU WHEN LINK IS CLICKED
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
       });
     </script>
   </body>
